@@ -42,12 +42,10 @@ $total_external_link_clicks = $stats->getTopExternalLinks();
 				<div class="titlebar_text">Total Views</div>
 		    </div>
 		    <div class="pluslet_body">
-				<table>
+				<table class="stats_table">
 				    <thead>
-					<tr>
-					    <td>Guide Name</td>
+					<td>Guide Name</td>
 					    <td>Number of Views</td>
-					</tr>
 				    </thead>
 				    <tbody>
 					<?php foreach ($total_per_guide as $guide_total) { ?>
@@ -55,7 +53,7 @@ $total_external_link_clicks = $stats->getTopExternalLinks();
 						<td>
 						    <?php echo $guide_total['page_title']; ?>
 						</td>
-						<td>
+						<td class="center">
 						    <?php echo $guide_total['num']; ?>
 						</td>
 					    </tr>
@@ -74,7 +72,7 @@ $total_external_link_clicks = $stats->getTopExternalLinks();
 				<div class="titlebar_text">Total Tab Clicks Per Guide</div>
 		    </div>
 		    <div class="pluslet_body">
-				<table>
+				<table class="stats_table">
 				    <thead>
 					<tr>
 					    <td>Tab Name</td>
@@ -91,7 +89,7 @@ $total_external_link_clicks = $stats->getTopExternalLinks();
 						<td>
 						    <?php echo $guide_total['subject_short_form']; ?>
 						</td>
-						<td>
+						<td class="center">
 						    <?php echo $guide_total['num']; ?>
 						</td>
 					    </tr>
@@ -109,7 +107,7 @@ $total_external_link_clicks = $stats->getTopExternalLinks();
 				<div class="titlebar_text">Total Link Clicks</div>
 		    </div>
 		    <div class="pluslet_body">
-				<table>
+				<table class="stats_table">
 				    <thead>
 					<tr>
 					    <td>Link URL</td>
@@ -122,7 +120,7 @@ $total_external_link_clicks = $stats->getTopExternalLinks();
 						<td>
 						    <?php echo $guide_total['link_url']; ?>
 						</td>
-						<td>
+						<td class="center">
 						    <?php echo $guide_total['num']; ?>
 						</td>
 					    </tr>

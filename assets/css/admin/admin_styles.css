@@ -4318,10 +4318,16 @@ Admin Screen User Profile
 .set_photo_container {background-color: #FFF; padding: 10px; margin: 10px 0;}
 
 
+/*///////////////////////////////////////////
+Full Stats Page
+////////////////////////////////////////////*/
 
+.stats_table {width: 100%;}
+.stats_table thead td{font-weight: bold;}
 
-
-
+.stats_table tbody tr {background-color: #f6e3e7;}
+.stats_table tbody tr:nth-child(odd) { background-color: transparent; }
+.stats_table .center {text-align: center;}
 
 
 /*///////////////////////////////////////////
