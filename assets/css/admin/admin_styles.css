@@ -1724,28 +1724,9 @@ li.fav-box-item:hover::before {color: #C03957;}
    padding: 10px 0;
 }
 
-.box_settings {
-  padding: 10px;
-  text-transform: none;
-  font-size: 0.9em;
-  display: none; 
-  position:absolute;
-  z-index: 99997;
-  top: 0;
-  left: 100%;
-  min-height: -moz-calc(100% - 20px);
-  min-height: -webkit-calc(100% - 20px);
-  min-height: calc(100% - 20px);
-  background-color: #f2f2f2;
-    box-shadow: 0 0 2px rgba(54, 51, 51, 0.4) inset;
-  color: #fff;
- 
-  width: 250px;
-}
 
-.box_settings label {
-  font-weight: normal;
-}
+
+
 
 
 /* Pluslet Flyout Box Settings */
@@ -1766,6 +1747,7 @@ li.fav-box-item:hover::before {color: #C03957;}
   background-color: #f2f2f2;
   box-shadow: 0 0 2px rgba(54, 51, 51, 0.4) inset;
   width: 210px;
+  color: #fff;
 }
 
 .box_settings label {
@@ -1779,6 +1761,57 @@ li.fav-box-item:hover::before {color: #C03957;}
 a[id^="delete-"], a.close-settings  {cursor: pointer; width:18px; height:18px; color: #858585 !important;}
 a[id^="delete-"] i, a.close-settings i {font-size: 18px;}
 a[id^="delete-"]:hover, a.close-settings:hover {color:#C03957 !important;}
+
+
+
+/* box options menu list */
+.gear_options {display:inline-block; position: relative;}
+
+.gear_options div.gear_list_container {
+  display: none;
+  position: absolute; 
+  left:100%; 
+  top: -5px;
+  margin: 0 0 0 5px;
+  z-index: 99997;
+}
+
+.gear_options i {font-size:16px !important;}
+
+.gear_options .gear_list_container i {float: none !important; display: inline-block; padding: 0 6px 0 0 !important; width: auto !important;}
+
+.gear_list_container ul {
+  background-color: #f2f2f2;
+  box-shadow: 0 0 2px rgba(54, 51, 51, 0.4) inset;
+  list-style-type: none; 
+  text-align: left; 
+  padding: 0;
+  margin:0;
+ min-width: 100px;
+}
+
+.gear_list_container ul li {padding:5px 10px; margin:0; cursor: pointer; border-bottom: 1px solid #CCC; border-top: 1px solid #FFF;}
+
+.gear_list_container ul li:first-child {
+    border-top: none;
+}
+
+.gear_list_container ul li:last-child {
+    border-bottom: none;
+}
+
+.gear_list_container li:hover {background-color: #c03957; color: #FFF;}
+
+
+.gear_list_container a[id^="delete-"], 
+.gear_list_container a[id^="delete-"] i, 
+.gear_list_container i {color:#333 !important;}
+
+.gear_list_container li:hover a, 
+.gear_list_container li:hover i, 
+.gear_list_container a[id^="delete-"]:hover, 
+.gear_list_container a[id^="delete-"]:hover i {color: #FFF !important;}
+
 
 
 

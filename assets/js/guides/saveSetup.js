@@ -176,7 +176,8 @@ function saveSetup() {
 
 					pbody = mySaveSetup.addslashes(CKEDITOR.instances[lstrInstance].getData());
 
-				} else {
+				} 
+				else {
 
 					pbody = $('#pluslet-' + lintID).find('.pluslet_body').html();
 				}

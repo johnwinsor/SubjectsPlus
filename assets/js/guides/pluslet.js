@@ -28,6 +28,7 @@ function pluslet() {
 				myPluslet.makeEditable('a[id*=edit]', subjectId);
 				myPluslet.makeDeleteable('a[id*=delete]');
 				myPluslet.makeDeleteable('.section_remove', 'sections');
+				myPluslet.makeSettings('a[id*=setting_options]', subjectId);
 
 			},
 			bindUiActions : function() {
@@ -86,9 +87,9 @@ function pluslet() {
 			    ////////////////////
 			    // box-settings bind to show when clicking on gear or edit icon.
 			    ///////////////////
-			    $(document).on('click', 'a[id*=settings-]', function(event) {
-			        $(this).parent().parent().parent().find('.box_settings').toggle();
-			    });
+			    //$(document).on('click', 'a[id*=settings-]', function(event) {
+			     //   $(this).parent().parent().parent().find('.box_settings').toggle();
+			   // });
 
 			},
 				dropPluslet : function(clone_id, item_type, origin_id, clone_title) {
@@ -219,12 +220,9 @@ function pluslet() {
 						h.makeHelpable('img[class*=help-]');
 
 						//display box_settings for editable pluslet
-						$('#' + 'pluslet-' + edit_id[1]).find('.box_settings').delay(500).show();
+						//$('#' + 'pluslet-' + edit_id[1]).find('.box_settings').delay(500).show();
 
-						//close box settings panel
-						$( '.close-settings' ).click(function() {      
-							$('#' + 'pluslet-' + edit_id[1]).find('.box_settings').hide();
-						});
+						
 
 						// Hide body-content option from box settings options based on TYPE
 
@@ -259,6 +257,26 @@ function pluslet() {
 					return false;
 				});
 			}, 
+
+			makeSettings : function() {
+
+				$(document).on('click', 'a[id*=setting_options]', function(event) {
+			        $(this).parent().parent().parent().parent().parent().parent().parent().find('.box_settings').show();
+			        $('#response').hide();
+					$('#save_guide').fadeIn();
+			    });
+
+
+
+			    //close box settings panel
+				$( '.close-settings' ).click(function() { 
+					var setting_id = $(this).parent().parent().parent().parent().attr('id').split('-');
+					$('#' + 'pluslet-' + setting_id[1]).find('.box_settings').hide();
+				});
+				
+				
+			},
+
 			boxItemDropPluslet : function () {
 			    $('.box-item').dblclick('click', function(event) {
 			    	

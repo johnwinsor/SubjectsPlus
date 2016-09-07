@@ -15,18 +15,18 @@ $(document).ready(function($){
     });
 
     //////////////
-    // Dropdown Menus
+    // Dropdown Menus for Box Options
     // add hoverintent goodness
     ///////////////
 
     function addDroppy(){
-        $(this).find("ul.subnav").slideDown('fast').show();
+        $(this).find("div.gear_list_container").slideDown('fast').show();
         return;
 
     }
 
     function removeDroppy(){
-        $(this).find("ul.subnav").slideUp('slow');
+        $(this).find("div.gear_list_container").slideUp('slow');
         return;
     }
 
@@ -38,7 +38,7 @@ $(document).ready(function($){
         out: removeDroppy
     };
 
-    $("li.zoom").hoverIntent(droppyConfig);
+    $("div.gear_options").hoverIntent(droppyConfig);
 
     ///////////////////////
     // load new photo

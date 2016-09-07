@@ -111,7 +111,7 @@ class Pluslet {
                     if ($this->_pluslet_id == 1) {
                         $this->_icons .= "<a id=\"delete-$this->_pluslet_id\"><i class=\"fa fa-trash-o\" title=\"$delete_text\" /></i></a>";
                     } else {
-                        $this->_icons .= "<a id=\"edit-$this->_pluslet_id-$this->_type\"><i class=\"fa fa-cog\" title=\"" . _("Edit & Box Settings") . "\" /></i></a>";
+                        $this->_icons .= "<div class=\"gear_options\"><i class=\"fa fa-cog\" title=\"" . _("Box Options") . "\" /></i><div class=\"gear_list_container\"><ul><li><a id=\"setting_options-$this->_pluslet_id\" title=\"" . _("Settings for this box") . "\" class=\"open-settings\"><i class=\"fa fa-plus\" /></i>" . _("Settings") ."</a></li><li><a id=\"edit-$this->_pluslet_id-$this->_type\" title=\"" .  _("Edit this box content") . "\"><i class=\"fa fa-pencil\" /></i>" . _("Edit") . "</a></li><li><a id=\"delete-$this->_pluslet_id\" title=\"" . _("Remove item from this guide") . "\"><i class=\"fa fa-trash-o\" /></i>" . _("Delete") . "</a></li></ul></div></div>";
                     }
                 }
                 else {
@@ -280,8 +280,7 @@ class Pluslet {
 
         $box_settings = "<div class=\"box_settings pure-u-1\">
              <div class=\"pure-g\">
-                <div class=\"pure-u-1-2\"><a class=\"close-settings\"><i class=\"fa fa-times\" title=\"" . _("Close Settings Panel") . "\" /></i></a></div>
-                <div class=\"pure-u-1-2 delete-trigger\"><a id=\"delete-$this->_pluslet_id\"><i class=\"fa fa-trash-o\" title=\"" . _("Remove item from this guide") . "\" /></i></a></div>
+                <div class=\"pure-u-1\"><a class=\"close-settings\"><i class=\"fa fa-times\" title=\"" . _("Close Settings Panel") . "\" /></i></a></div>                
             </div>
 
             <form class=\"pure-form box-settings-form\">               
